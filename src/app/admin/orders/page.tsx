@@ -73,7 +73,7 @@ export default function AdminOrdersPage() {
           { label: "Confirmed", value: confirmedCount, icon: CheckCircle, color: "text-green-600" },
           { label: "Rejected", value: rejectedCount, icon: XCircle, color: "text-red-600" },
         ].map((stat) => (
-          <div key={stat.label} className="bg-white rounded-xl p-3 sm:p-4 shadow-sm">
+          <div key={stat.label} className="bg-brown-900 rounded-xl p-3 sm:p-4 shadow-sm">
             <div className="flex items-center justify-between mb-1 sm:mb-2">
               <stat.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${stat.color}`} />
             </div>
@@ -91,7 +91,7 @@ export default function AdminOrdersPage() {
             className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap transition-colors ${
               filter === status
                 ? "bg-brown-900 text-cream"
-                : "bg-white text-brown-600 hover:bg-brown-100"
+                : "bg-brown-900 text-cream hover:bg-brown-800"
             }`}
           >
             {status === "all" ? "All Orders" : status}
@@ -101,7 +101,7 @@ export default function AdminOrdersPage() {
 
       <div className="space-y-3 sm:space-y-4">
         {filteredOrders.length === 0 ? (
-          <div className="bg-white rounded-2xl p-8 sm:p-12 text-center shadow-sm">
+          <div className="bg-brown-900 rounded-2xl p-8 sm:p-12 text-center shadow-sm">
             <Package className="w-10 h-10 sm:w-12 sm:h-12 mx-auto text-brown-200 mb-3 sm:mb-4" />
             <p className="text-brown-500 text-sm sm:text-base">No orders found</p>
           </div>
@@ -110,7 +110,7 @@ export default function AdminOrdersPage() {
             <motion.div
               layout
               key={order.id}
-              className="bg-white rounded-xl sm:rounded-2xl shadow-sm overflow-hidden"
+              className="bg-brown-900 rounded-xl sm:rounded-2xl shadow-sm overflow-hidden"
             >
               <div className="p-3 sm:p-6">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3 mb-3 sm:mb-4">

@@ -128,7 +128,7 @@ export default function CheckoutPage() {
 
   if (items.length === 0) {
     return (
-      <section className="py-16 sm:py-24 bg-cream min-h-[60vh] flex items-center">
+      <section className="py-16 sm:py-24 bg-black min-h-[60vh] flex items-center">
         <div className="max-w-md mx-auto px-4 text-center">
           <p className="text-brown-500 mb-6 text-sm sm:text-base">Your cart is empty. Add some delicious cookies first!</p>
           <Link
@@ -144,7 +144,7 @@ export default function CheckoutPage() {
   }
 
   return (
-    <section className="py-6 sm:py-12 bg-cream min-h-screen">
+    <section className="py-6 sm:py-12 bg-black min-h-screen">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link href="/cart" className="inline-flex items-center gap-1.5 text-sm text-brown-600 hover:text-brown-900 mb-4 sm:mb-6">
           <ChevronLeft className="w-4 h-4" />
@@ -157,7 +157,7 @@ export default function CheckoutPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           <div className="lg:col-span-2 space-y-4 sm:space-y-6">
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm">
+            <div className="bg-brown-900 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm">
               <h2 className="font-playfair text-lg sm:text-xl font-bold text-brown-900 mb-4">Delivery Details</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div className="sm:col-span-2">
@@ -223,7 +223,7 @@ export default function CheckoutPage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm">
+            <div className="bg-brown-900 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm">
               <h2 className="font-playfair text-lg sm:text-xl font-bold text-brown-900 mb-4">Payment Method</h2>
               <div className="flex gap-2 sm:gap-4 mb-4 sm:mb-6">
                 <button
@@ -254,7 +254,7 @@ export default function CheckoutPage() {
                   animate={{ opacity: 1, y: 0 }}
                   className="space-y-3 sm:space-y-4 p-3 sm:p-4 bg-brown-50 rounded-lg sm:rounded-xl"
                 >
-                  <div className="flex items-center justify-between p-2.5 sm:p-3 bg-white rounded-lg">
+                  <div className="flex items-center justify-between p-2.5 sm:p-3 bg-brown-900 rounded-lg">
                     <div>
                       <p className="text-xs sm:text-sm text-brown-500">UPI ID</p>
                       <p className="font-mono text-sm sm:text-base font-semibold text-brown-900">{upiConfig.upiId}</p>
@@ -334,7 +334,7 @@ export default function CheckoutPage() {
           </div>
 
           <div className="lg:col-span-1">
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm lg:sticky lg:top-24">
+            <div className="bg-brown-900 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm lg:sticky lg:top-24">
               <h3 className="font-playfair text-lg sm:text-xl font-bold text-brown-900 mb-3 sm:mb-4">Order Summary</h3>
 
               <div className="space-y-2 sm:space-y-3 mb-3 sm:mb-4 max-h-40 sm:max-h-48 overflow-y-auto">

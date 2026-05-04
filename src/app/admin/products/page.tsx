@@ -79,7 +79,7 @@ export default function AdminProductsPage() {
       </div>
 
       {products.length === 0 ? (
-        <div className="bg-white rounded-2xl p-12 text-center shadow-sm">
+        <div className="bg-brown-900 rounded-2xl p-12 text-center shadow-sm">
           <Package className="w-12 h-12 mx-auto text-brown-200 mb-4" />
           <p className="text-brown-500 mb-4">No products found</p>
           <Link
@@ -96,7 +96,7 @@ export default function AdminProductsPage() {
             <motion.div
               layout
               key={product.id}
-              className="bg-white rounded-xl shadow-sm overflow-hidden"
+              className="bg-brown-900 rounded-xl shadow-sm overflow-hidden"
             >
               <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4">
                 <img

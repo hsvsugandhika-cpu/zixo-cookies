@@ -9,7 +9,7 @@ export default function AddProductPage() {
         <h1 className="text-xl sm:text-2xl font-playfair font-bold text-brown-900">Add Product</h1>
         <p className="text-sm text-brown-500 mt-1">Create a new cookie product</p>
       </div>
-      <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-sm">
+      <div className="bg-brown-900 rounded-2xl p-4 sm:p-6 shadow-sm">
         <ProductForm />
       </div>
     </div>

@@ -176,7 +176,7 @@ export function ProductForm({ initialData, isEdit, productId }: ProductFormProps
           <select
             value={form.category}
             onChange={(e) => setForm({ ...form, category: e.target.value })}
-            className="w-full px-4 py-2.5 border border-brown-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold bg-white"
+            className="w-full px-4 py-2.5 border border-brown-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold bg-brown-900"
             required
           >
             <option value="">Select category</option>
@@ -203,7 +203,7 @@ export function ProductForm({ initialData, isEdit, productId }: ProductFormProps
           <select
             value={form.badge || ""}
             onChange={(e) => setForm({ ...form, badge: e.target.value || undefined })}
-            className="w-full px-4 py-2.5 border border-brown-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold bg-white"
+            className="w-full px-4 py-2.5 border border-brown-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold bg-brown-900"
           >
             <option value="">No badge</option>
             <option value="Bestseller">Bestseller</option>

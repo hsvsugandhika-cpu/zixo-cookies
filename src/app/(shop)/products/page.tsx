@@ -3,7 +3,7 @@ import { ProductCard } from "@/components/ProductCard"
 
 export default function ProductsPage() {
   return (
-    <section className="py-8 sm:py-12 lg:py-16 bg-cream min-h-screen">
+    <section className="py-8 sm:py-12 lg:py-16 bg-black min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-10 lg:mb-14">
           <span className="text-gold text-xs sm:text-sm font-semibold uppercase tracking-widest">

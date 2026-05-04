@@ -24,7 +24,7 @@ export default function OrderSuccessPage() {
   )
 
   return (
-    <section className="py-12 sm:py-24 bg-cream min-h-[70vh] flex items-center">
+    <section className="py-12 sm:py-24 bg-black min-h-[70vh] flex items-center">
       <div className="max-w-lg mx-auto px-4 text-center">
         <motion.div
           initial={{ scale: 0 }}
@@ -57,7 +57,7 @@ export default function OrderSuccessPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm mb-6 sm:mb-8"
+          className="bg-brown-900 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm mb-6 sm:mb-8"
         >
           <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
             <Package className="w-4 h-4 sm:w-5 sm:h-5 text-gold" />

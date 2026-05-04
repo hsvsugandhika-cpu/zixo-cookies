@@ -13,7 +13,7 @@ export default function CartPage() {
 
   if (items.length === 0) {
     return (
-      <section className="py-16 sm:py-24 bg-cream min-h-[60vh] flex items-center">
+      <section className="py-16 sm:py-24 bg-black min-h-[60vh] flex items-center">
         <div className="max-w-md mx-auto px-4 text-center">
           <ShoppingBag className="w-14 h-14 sm:w-16 sm:h-16 mx-auto text-brown-200 mb-6" />
           <h2 className="text-2xl sm:text-3xl font-playfair font-bold text-brown-900 mb-3">
@@ -35,7 +35,7 @@ export default function CartPage() {
   }
 
   return (
-    <section className="py-6 sm:py-12 bg-cream min-h-screen">
+    <section className="py-6 sm:py-12 bg-black min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-playfair font-bold text-brown-900 mb-6 sm:mb-10">
           Your Cart
@@ -47,7 +47,7 @@ export default function CartPage() {
               <motion.div
                 layout
                 key={item.product.id}
-                className="flex gap-3 sm:gap-4 p-3 sm:p-4 bg-white rounded-xl sm:rounded-2xl shadow-sm"
+                className="flex gap-3 sm:gap-4 p-3 sm:p-4 bg-brown-900 rounded-xl sm:rounded-2xl shadow-sm"
               >
                 <Link href={`/product/${item.product.id}`} className="w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 rounded-lg sm:rounded-xl overflow-hidden">
                   <img
@@ -99,7 +99,7 @@ export default function CartPage() {
           </div>
 
           <div className="lg:col-span-1">
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm lg:sticky lg:top-24">
+            <div className="bg-brown-900 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm lg:sticky lg:top-24">
               <h3 className="font-playfair text-lg sm:text-xl font-bold text-brown-900 mb-4">Order Summary</h3>
 
               <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
