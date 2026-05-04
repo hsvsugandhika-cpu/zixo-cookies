@@ -123,7 +123,7 @@ export function ProductForm({ initialData, isEdit, productId }: ProductFormProps
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="sm:col-span-2">
-          <label className="block text-sm font-medium text-brown-700 mb-1">Product Name *</label>
+          <label className="block text-sm font-medium text-brown-300 mb-1">Product Name *</label>
           <input
             type="text"
             value={form.name}
@@ -135,7 +135,7 @@ export function ProductForm({ initialData, isEdit, productId }: ProductFormProps
         </div>
 
         <div className="sm:col-span-2">
-          <label className="block text-sm font-medium text-brown-700 mb-1">Description *</label>
+          <label className="block text-sm font-medium text-brown-300 mb-1">Description *</label>
           <textarea
             value={form.description}
             onChange={(e) => setForm({ ...form, description: e.target.value })}
@@ -147,7 +147,7 @@ export function ProductForm({ initialData, isEdit, productId }: ProductFormProps
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-brown-700 mb-1">Price (₹) *</label>
+          <label className="block text-sm font-medium text-brown-300 mb-1">Price (₹) *</label>
           <input
             type="number"
             value={form.price || ""}
@@ -160,7 +160,7 @@ export function ProductForm({ initialData, isEdit, productId }: ProductFormProps
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-brown-700 mb-1">Original Price (₹)</label>
+          <label className="block text-sm font-medium text-brown-300 mb-1">Original Price (₹)</label>
           <input
             type="number"
             value={form.originalPrice || ""}
@@ -172,7 +172,7 @@ export function ProductForm({ initialData, isEdit, productId }: ProductFormProps
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-brown-700 mb-1">Category *</label>
+          <label className="block text-sm font-medium text-brown-300 mb-1">Category *</label>
           <select
             value={form.category}
             onChange={(e) => setForm({ ...form, category: e.target.value })}
@@ -188,7 +188,7 @@ export function ProductForm({ initialData, isEdit, productId }: ProductFormProps
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-brown-700 mb-1">Weight</label>
+          <label className="block text-sm font-medium text-brown-300 mb-1">Weight</label>
           <input
             type="text"
             value={form.weight}
@@ -199,7 +199,7 @@ export function ProductForm({ initialData, isEdit, productId }: ProductFormProps
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-brown-700 mb-1">Badge (optional)</label>
+          <label className="block text-sm font-medium text-brown-300 mb-1">Badge (optional)</label>
           <select
             value={form.badge || ""}
             onChange={(e) => setForm({ ...form, badge: e.target.value || undefined })}
@@ -223,13 +223,13 @@ export function ProductForm({ initialData, isEdit, productId }: ProductFormProps
               onChange={(e) => setForm({ ...form, inStock: e.target.checked })}
               className="w-4 h-4 rounded border-brown-300 text-gold focus:ring-gold/50"
             />
-            <span className="text-sm text-brown-700">In Stock</span>
+            <span className="text-sm text-brown-300">In Stock</span>
           </label>
         </div>
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-brown-700 mb-2">Images</label>
+        <label className="block text-sm font-medium text-brown-300 mb-2">Images</label>
         <div className="space-y-3">
           <div className="flex gap-2">
             <input
@@ -280,7 +280,7 @@ export function ProductForm({ initialData, isEdit, productId }: ProductFormProps
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-brown-700 mb-2">Ingredients</label>
+        <label className="block text-sm font-medium text-brown-300 mb-2">Ingredients</label>
         <div className="flex gap-2">
           <input
             type="text"
@@ -298,7 +298,7 @@ export function ProductForm({ initialData, isEdit, productId }: ProductFormProps
           <button
             type="button"
             onClick={addIngredient}
-            className="px-3 py-2.5 bg-brown-100 text-brown-700 rounded-xl hover:bg-brown-200 transition-colors text-sm"
+            className="px-3 py-2.5 bg-brown-100 text-brown-300 rounded-xl hover:bg-brown-200 transition-colors text-sm"
           >
             <Plus className="w-4 h-4" />
           </button>
@@ -308,7 +308,7 @@ export function ProductForm({ initialData, isEdit, productId }: ProductFormProps
             {form.ingredients.map((ing, index) => (
               <span
                 key={index}
-                className="inline-flex items-center gap-1 px-2.5 py-1 bg-brown-100 text-brown-700 text-xs rounded-full"
+                className="inline-flex items-center gap-1 px-2.5 py-1 bg-brown-100 text-brown-300 text-xs rounded-full"
               >
                 {ing}
                 <button
@@ -344,7 +344,7 @@ export function ProductForm({ initialData, isEdit, productId }: ProductFormProps
         <button
           type="button"
           onClick={() => router.push("/admin/products")}
-          className="px-6 py-3 bg-brown-100 text-brown-700 font-medium rounded-xl hover:bg-brown-200 transition-colors text-sm"
+          className="px-6 py-3 bg-brown-100 text-brown-300 font-medium rounded-xl hover:bg-brown-200 transition-colors text-sm"
         >
           Cancel
         </button>

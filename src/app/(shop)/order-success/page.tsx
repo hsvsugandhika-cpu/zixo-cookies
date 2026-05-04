@@ -39,7 +39,7 @@ export default function OrderSuccessPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-2xl sm:text-3xl lg:text-4xl font-playfair font-bold text-brown-900 mb-2 sm:mb-3"
+          className="text-2xl sm:text-3xl lg:text-4xl font-playfair font-bold text-cream mb-2 sm:mb-3"
         >
           Order Placed!
         </motion.h1>
@@ -63,7 +63,7 @@ export default function OrderSuccessPage() {
             <Package className="w-4 h-4 sm:w-5 sm:h-5 text-gold" />
             <span className="text-xs sm:text-sm text-brown-500">Order ID</span>
           </div>
-          <p className="font-mono text-lg sm:text-2xl font-bold text-brown-900 mb-1 sm:mb-2">{orderId}</p>
+          <p className="font-mono text-lg sm:text-2xl font-bold text-cream mb-1 sm:mb-2">{orderId}</p>
           <p className="text-sm sm:text-base text-brown-600">Amount: ₹{total}</p>
           {method === "upi" && mounted && (
             <p className="text-xs sm:text-sm text-amber-600 mt-2 sm:mt-3">
@@ -90,7 +90,7 @@ export default function OrderSuccessPage() {
 
           <Link
             href="/products"
-            className="w-full py-3 sm:py-4 bg-brown-900 text-cream font-semibold rounded-full hover:bg-gold hover:text-brown-900 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+            className="w-full py-3 sm:py-4 bg-brown-900 text-cream font-semibold rounded-full hover:bg-gold hover:text-cream transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
           >
             Continue Shopping
             <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />

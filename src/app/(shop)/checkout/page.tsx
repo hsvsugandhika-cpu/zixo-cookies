@@ -146,22 +146,22 @@ export default function CheckoutPage() {
   return (
     <section className="py-6 sm:py-12 bg-black min-h-screen">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Link href="/cart" className="inline-flex items-center gap-1.5 text-sm text-brown-600 hover:text-brown-900 mb-4 sm:mb-6">
+        <Link href="/cart" className="inline-flex items-center gap-1.5 text-sm text-brown-300 hover:text-cream mb-4 sm:mb-6">
           <ChevronLeft className="w-4 h-4" />
           Back to Cart
         </Link>
 
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-playfair font-bold text-brown-900 mb-6 sm:mb-10">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-playfair font-bold text-cream mb-6 sm:mb-10">
           Checkout
         </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           <div className="lg:col-span-2 space-y-4 sm:space-y-6">
             <div className="bg-brown-900 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm">
-              <h2 className="font-playfair text-lg sm:text-xl font-bold text-brown-900 mb-4">Delivery Details</h2>
+              <h2 className="font-playfair text-lg sm:text-xl font-bold text-cream mb-4">Delivery Details</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div className="sm:col-span-2">
-                  <label className="block text-sm font-medium text-brown-700 mb-1">Full Name *</label>
+                  <label className="block text-sm font-medium text-brown-300 mb-1">Full Name *</label>
                   <input
                     type="text"
                     value={formData.name}
@@ -171,7 +171,7 @@ export default function CheckoutPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-brown-700 mb-1">Phone Number *</label>
+                  <label className="block text-sm font-medium text-brown-300 mb-1">Phone Number *</label>
                   <input
                     type="tel"
                     value={formData.phone}
@@ -181,7 +181,7 @@ export default function CheckoutPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-brown-700 mb-1">City *</label>
+                  <label className="block text-sm font-medium text-brown-300 mb-1">City *</label>
                   <input
                     type="text"
                     value={formData.city}
@@ -191,7 +191,7 @@ export default function CheckoutPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-brown-700 mb-1">Pincode *</label>
+                  <label className="block text-sm font-medium text-brown-300 mb-1">Pincode *</label>
                   <input
                     type="text"
                     value={formData.pincode}
@@ -201,7 +201,7 @@ export default function CheckoutPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-brown-700 mb-1">State</label>
+                  <label className="block text-sm font-medium text-brown-300 mb-1">State</label>
                   <input
                     type="text"
                     value={formData.state}
@@ -211,7 +211,7 @@ export default function CheckoutPage() {
                   />
                 </div>
                 <div className="sm:col-span-2">
-                  <label className="block text-sm font-medium text-brown-700 mb-1">Full Address *</label>
+                  <label className="block text-sm font-medium text-brown-300 mb-1">Full Address *</label>
                   <textarea
                     value={formData.address}
                     onChange={(e) => setFormData({ ...formData, address: e.target.value })}
@@ -224,13 +224,13 @@ export default function CheckoutPage() {
             </div>
 
             <div className="bg-brown-900 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm">
-              <h2 className="font-playfair text-lg sm:text-xl font-bold text-brown-900 mb-4">Payment Method</h2>
+              <h2 className="font-playfair text-lg sm:text-xl font-bold text-cream mb-4">Payment Method</h2>
               <div className="flex gap-2 sm:gap-4 mb-4 sm:mb-6">
                 <button
                   onClick={() => setPaymentMethod("upi")}
                   className={`flex-1 py-2.5 sm:py-3 px-3 sm:px-4 rounded-lg sm:rounded-xl border-2 text-sm sm:text-base font-medium transition-all ${
                     paymentMethod === "upi"
-                      ? "border-gold bg-gold/10 text-brown-900"
+                      ? "border-gold bg-gold/10 text-cream"
                       : "border-brown-200 text-brown-500 hover:border-brown-300"
                   }`}
                 >
@@ -240,7 +240,7 @@ export default function CheckoutPage() {
                   onClick={() => setPaymentMethod("cod")}
                   className={`flex-1 py-2.5 sm:py-3 px-3 sm:px-4 rounded-lg sm:rounded-xl border-2 text-sm sm:text-base font-medium transition-all ${
                     paymentMethod === "cod"
-                      ? "border-gold bg-gold/10 text-brown-900"
+                      ? "border-gold bg-gold/10 text-cream"
                       : "border-brown-200 text-brown-500 hover:border-brown-300"
                   }`}
                 >
@@ -257,7 +257,7 @@ export default function CheckoutPage() {
                   <div className="flex items-center justify-between p-2.5 sm:p-3 bg-brown-900 rounded-lg">
                     <div>
                       <p className="text-xs sm:text-sm text-brown-500">UPI ID</p>
-                      <p className="font-mono text-sm sm:text-base font-semibold text-brown-900">{upiConfig.upiId}</p>
+                      <p className="font-mono text-sm sm:text-base font-semibold text-cream">{upiConfig.upiId}</p>
                     </div>
                     <button
                       onClick={copyUpiId}
@@ -285,7 +285,7 @@ export default function CheckoutPage() {
 
                   <div className="space-y-3 pt-1 sm:pt-2">
                     <div>
-                      <label className="block text-sm font-medium text-brown-700 mb-1">Transaction ID *</label>
+                      <label className="block text-sm font-medium text-brown-300 mb-1">Transaction ID *</label>
                       <input
                         type="text"
                         value={transactionId}
@@ -295,14 +295,14 @@ export default function CheckoutPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-brown-700 mb-1">
+                      <label className="block text-sm font-medium text-brown-300 mb-1">
                         Payment Screenshot *
                       </label>
                       <input
                         type="file"
                         accept="image/*"
                         onChange={(e) => setScreenshot(e.target.files?.[0] || null)}
-                        className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-brown-200 rounded-lg sm:rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold file:mr-3 sm:file:mr-4 file:py-1.5 sm:file:py-2 file:px-3 sm:file:px-4 file:rounded-lg file:border-0 file:bg-gold/10 file:text-brown-900 file:font-medium file:text-sm file:cursor-pointer"
+                        className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-brown-200 rounded-lg sm:rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold file:mr-3 sm:file:mr-4 file:py-1.5 sm:file:py-2 file:px-3 sm:file:px-4 file:rounded-lg file:border-0 file:bg-gold/10 file:text-cream file:font-medium file:text-sm file:cursor-pointer"
                       />
                     </div>
                   </div>
@@ -315,7 +315,7 @@ export default function CheckoutPage() {
                   animate={{ opacity: 1, y: 0 }}
                   className="p-3 sm:p-4 bg-brown-50 rounded-lg sm:rounded-xl"
                 >
-                  <p className="text-xs sm:text-sm text-brown-600">
+                  <p className="text-xs sm:text-sm text-brown-300">
                     Pay cash when your order is delivered. Please keep exact change ready.
                   </p>
                 </motion.div>
@@ -335,12 +335,12 @@ export default function CheckoutPage() {
 
           <div className="lg:col-span-1">
             <div className="bg-brown-900 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm lg:sticky lg:top-24">
-              <h3 className="font-playfair text-lg sm:text-xl font-bold text-brown-900 mb-3 sm:mb-4">Order Summary</h3>
+              <h3 className="font-playfair text-lg sm:text-xl font-bold text-cream mb-3 sm:mb-4">Order Summary</h3>
 
               <div className="space-y-2 sm:space-y-3 mb-3 sm:mb-4 max-h-40 sm:max-h-48 overflow-y-auto">
                 {items.map((item) => (
                   <div key={item.product.id} className="flex justify-between text-xs sm:text-sm">
-                    <span className="text-brown-600">
+                    <span className="text-brown-300">
                       {item.product.name} × {item.quantity}
                     </span>
                     <span className="font-medium">₹{item.product.price * item.quantity}</span>
@@ -372,7 +372,7 @@ export default function CheckoutPage() {
               </div>
 
               <div className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-6 pt-2 sm:pt-3 sm:border-t sm:border-brown-100">
-                <div className="flex justify-between text-xs sm:text-sm text-brown-600">
+                <div className="flex justify-between text-xs sm:text-sm text-brown-300">
                   <span>Subtotal</span>
                   <span>₹{subtotal}</span>
                 </div>
@@ -382,13 +382,13 @@ export default function CheckoutPage() {
                     <span>-₹{discount}</span>
                   </div>
                 )}
-                <div className="flex justify-between text-xs sm:text-sm text-brown-600">
+                <div className="flex justify-between text-xs sm:text-sm text-brown-300">
                   <span>Delivery</span>
                   <span className="text-green-600 font-medium">Free</span>
                 </div>
                 <div className="flex justify-between pt-2 border-t border-brown-100">
-                  <span className="font-bold text-brown-900 text-base sm:text-lg">Total</span>
-                  <span className="font-bold text-brown-900 text-base sm:text-lg">₹{total}</span>
+                  <span className="font-bold text-cream text-base sm:text-lg">Total</span>
+                  <span className="font-bold text-cream text-base sm:text-lg">₹{total}</span>
                 </div>
               </div>
 

@@ -16,7 +16,7 @@ export default function CartPage() {
       <section className="py-16 sm:py-24 bg-black min-h-[60vh] flex items-center">
         <div className="max-w-md mx-auto px-4 text-center">
           <ShoppingBag className="w-14 h-14 sm:w-16 sm:h-16 mx-auto text-brown-200 mb-6" />
-          <h2 className="text-2xl sm:text-3xl font-playfair font-bold text-brown-900 mb-3">
+          <h2 className="text-2xl sm:text-3xl font-playfair font-bold text-cream mb-3">
             Your cart is empty
           </h2>
           <p className="text-brown-500 mb-8 text-sm sm:text-base">
@@ -37,7 +37,7 @@ export default function CartPage() {
   return (
     <section className="py-6 sm:py-12 bg-black min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-playfair font-bold text-brown-900 mb-6 sm:mb-10">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-playfair font-bold text-cream mb-6 sm:mb-10">
           Your Cart
         </h1>
 
@@ -59,12 +59,12 @@ export default function CartPage() {
 
                 <div className="flex-1 min-w-0">
                   <Link href={`/product/${item.product.id}`}>
-                    <h3 className="font-playfair font-semibold text-brown-900 truncate hover:text-gold transition-colors text-sm sm:text-base">
+                    <h3 className="font-playfair font-semibold text-cream truncate hover:text-gold transition-colors text-sm sm:text-base">
                       {item.product.name}
                     </h3>
                   </Link>
                   <p className="text-xs sm:text-sm text-brown-500 mt-0.5 sm:mt-1">{item.product.weight}</p>
-                  <p className="font-bold text-brown-900 mt-1 sm:mt-2 text-sm sm:text-base">₹{item.product.price}</p>
+                  <p className="font-bold text-cream mt-1 sm:mt-2 text-sm sm:text-base">₹{item.product.price}</p>
                 </div>
 
                 <div className="flex flex-col items-end justify-between">
@@ -100,7 +100,7 @@ export default function CartPage() {
 
           <div className="lg:col-span-1">
             <div className="bg-brown-900 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm lg:sticky lg:top-24">
-              <h3 className="font-playfair text-lg sm:text-xl font-bold text-brown-900 mb-4">Order Summary</h3>
+              <h3 className="font-playfair text-lg sm:text-xl font-bold text-cream mb-4">Order Summary</h3>
 
               <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                 <div className="flex justify-between text-sm sm:text-base text-brown-600">
@@ -112,8 +112,8 @@ export default function CartPage() {
                   <span className="text-green-600 font-medium">Free</span>
                 </div>
                 <div className="border-t border-brown-100 pt-2 sm:pt-3 flex justify-between">
-                  <span className="font-bold text-brown-900 text-base sm:text-lg">Total</span>
-                  <span className="font-bold text-brown-900 text-base sm:text-lg">₹{getTotal()}</span>
+                  <span className="font-bold text-cream text-base sm:text-lg">Total</span>
+                  <span className="font-bold text-cream text-base sm:text-lg">₹{getTotal()}</span>
                 </div>
               </div>
 

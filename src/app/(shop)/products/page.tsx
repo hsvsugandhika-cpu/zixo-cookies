@@ -9,7 +9,7 @@ export default function ProductsPage() {
           <span className="text-gold text-xs sm:text-sm font-semibold uppercase tracking-widest">
             Our Collection
           </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-playfair font-bold text-brown-900 mt-2 sm:mt-3">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-playfair font-bold text-cream mt-2 sm:mt-3">
             Premium Cookies
           </h1>
           <p className="text-brown-500 mt-3 sm:mt-4 max-w-lg mx-auto text-sm sm:text-base px-4">

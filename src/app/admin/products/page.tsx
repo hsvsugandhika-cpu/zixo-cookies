@@ -66,7 +66,7 @@ export default function AdminProductsPage() {
     <div className="p-4 sm:p-6 lg:p-8">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
         <div>
-          <h1 className="text-xl sm:text-2xl font-playfair font-bold text-brown-900">Products</h1>
+          <h1 className="text-xl sm:text-2xl font-playfair font-bold text-cream">Products</h1>
           <p className="text-sm text-brown-500 mt-1">{products.length} products in store</p>
         </div>
         <Link
@@ -84,7 +84,7 @@ export default function AdminProductsPage() {
           <p className="text-brown-500 mb-4">No products found</p>
           <Link
             href="/admin/products/new"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-gold text-brown-900 font-medium rounded-xl hover:bg-gold-light transition-colors text-sm"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-gold text-cream font-medium rounded-xl hover:bg-gold-light transition-colors text-sm"
           >
             <Plus className="w-4 h-4" />
             Add Your First Product
@@ -106,7 +106,7 @@ export default function AdminProductsPage() {
                 />
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2">
-                    <h3 className="font-semibold text-brown-900 text-sm sm:text-base truncate">{product.name}</h3>
+                    <h3 className="font-semibold text-cream text-sm sm:text-base truncate">{product.name}</h3>
                     {product.badge && (
                       <span className="px-2 py-0.5 bg-gold/10 text-gold text-[10px] font-semibold rounded-full hidden sm:inline">
                         {product.badge}
@@ -115,7 +115,7 @@ export default function AdminProductsPage() {
                   </div>
                   <p className="text-xs text-brown-500 mt-0.5">{product.category} · {product.weight}</p>
                   <div className="flex items-center gap-3 mt-1">
-                    <span className="font-bold text-brown-900 text-sm">₹{product.price}</span>
+                    <span className="font-bold text-cream text-sm">₹{product.price}</span>
                     {product.originalPrice && (
                       <span className="text-xs text-brown-400 line-through">₹{product.originalPrice}</span>
                     )}

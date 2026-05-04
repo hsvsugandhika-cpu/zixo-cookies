@@ -70,7 +70,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
                 {product.badge}
               </span>
             )}
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-playfair font-bold text-brown-900">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-playfair font-bold text-cream">
               {product.name}
             </h1>
 
@@ -89,7 +89,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
             </div>
 
             <div className="flex items-center gap-2 sm:gap-3 mt-4 sm:mt-6 flex-wrap">
-              <span className="text-2xl sm:text-3xl font-bold text-brown-900">₹{product.price}</span>
+              <span className="text-2xl sm:text-3xl font-bold text-cream">₹{product.price}</span>
               {product.originalPrice && (
                 <>
                   <span className="text-base sm:text-xl text-brown-400 line-through">₹{product.originalPrice}</span>
@@ -103,12 +103,12 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
             <p className="text-sm sm:text-base text-brown-600 mt-4 sm:mt-6 leading-relaxed">{product.description}</p>
 
             <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-brown-50 rounded-lg sm:rounded-xl">
-              <p className="text-xs sm:text-sm font-semibold text-brown-900 mb-1 sm:mb-2">Weight</p>
+              <p className="text-xs sm:text-sm font-semibold text-cream mb-1 sm:mb-2">Weight</p>
               <p className="text-sm text-brown-600">{product.weight}</p>
             </div>
 
             <div className="mt-4 sm:mt-6">
-              <p className="text-xs sm:text-sm font-semibold text-brown-900 mb-2 sm:mb-3">Quantity</p>
+              <p className="text-xs sm:text-sm font-semibold text-cream mb-2 sm:mb-3">Quantity</p>
               <div className="flex items-center gap-3">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
@@ -155,7 +155,7 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
             </div>
 
             <div className="mt-6 sm:mt-8">
-              <h3 className="font-semibold text-sm sm:text-base text-brown-900 mb-2 sm:mb-3">Premium Ingredients</h3>
+              <h3 className="font-semibold text-sm sm:text-base text-cream mb-2 sm:mb-3">Premium Ingredients</h3>
               <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {product.ingredients.map((ingredient) => (
                   <span

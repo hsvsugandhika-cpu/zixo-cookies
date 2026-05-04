@@ -42,7 +42,7 @@ export default function EditProductPage() {
   return (
     <div className="p-4 sm:p-6 lg:p-8">
       <div className="mb-6">
-        <h1 className="text-xl sm:text-2xl font-playfair font-bold text-brown-900">Edit Product</h1>
+        <h1 className="text-xl sm:text-2xl font-playfair font-bold text-cream">Edit Product</h1>
         <p className="text-sm text-brown-500 mt-1">{product.name}</p>
       </div>
       <div className="bg-brown-900 rounded-2xl p-4 sm:p-6 shadow-sm">

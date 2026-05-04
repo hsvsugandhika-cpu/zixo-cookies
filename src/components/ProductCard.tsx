@@ -39,7 +39,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
       className="group"
     >
       <Link href={`/product/${product.id}`} className="block">
-        <div className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-brown-50 h-[120px] sm:h-[160px] mb-2 sm:mb-3">
+        <div className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-neutral-900 h-[120px] sm:h-[160px] mb-2 sm:mb-3">
           <img
             src={product.image}
             alt={product.name}
@@ -60,16 +60,16 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
 
       <div className="px-0.5 sm:px-1">
         <Link href={`/product/${product.id}`}>
-          <h3 className="font-playfair text-sm sm:text-lg font-semibold text-brown-900 group-hover:text-gold transition-colors leading-tight">
+          <h3 className="font-playfair text-sm sm:text-lg font-semibold text-cream group-hover:text-gold transition-colors leading-tight">
             {product.name}
           </h3>
         </Link>
-        <p className="text-[10px] sm:text-sm text-brown-500 mt-0.5 sm:mt-1">{product.weight}</p>
+        <p className="text-[10px] sm:text-sm text-brown-400 mt-0.5 sm:mt-1">{product.weight}</p>
         <div className="flex items-center justify-between mt-1.5 sm:mt-3">
           <div className="flex items-center gap-1 sm:gap-2">
-            <span className="text-base sm:text-xl font-bold text-brown-900">₹{product.price}</span>
+            <span className="text-base sm:text-xl font-bold text-cream">₹{product.price}</span>
             {product.originalPrice && (
-              <span className="text-[10px] sm:text-sm text-brown-400 line-through hidden sm:inline">₹{product.originalPrice}</span>
+              <span className="text-[10px] sm:text-sm text-brown-500 line-through hidden sm:inline">₹{product.originalPrice}</span>
             )}
           </div>
           <motion.button

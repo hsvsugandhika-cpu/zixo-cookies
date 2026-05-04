@@ -24,11 +24,11 @@ export function Header() {
   }, [])
 
   return (
-    <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-xl border-b border-brown-800">
+    <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-xl border-b border-neutral-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl sm:text-3xl font-playfair font-bold text-brown-900 tracking-tight">
+            <span className="text-2xl sm:text-3xl font-playfair font-bold text-cream tracking-tight">
               Zixo <span className="text-gold">Cookies</span>
             </span>
           </Link>
@@ -38,7 +38,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative text-sm font-medium text-brown-600 hover:text-brown-900 transition-colors"
+                className="relative text-sm font-medium text-brown-300 hover:text-gold transition-colors"
               >
                 {link.label}
                 {pathname === link.href && (
@@ -54,7 +54,7 @@ export function Header() {
           <div className="flex items-center gap-4">
             <Link
               href="/cart"
-              className="relative p-2 text-brown-600 hover:text-brown-900 transition-colors"
+              className="relative p-2 text-brown-300 hover:text-gold transition-colors"
             >
               <ShoppingBag className="w-5 h-5 sm:w-6 sm:h-6" />
               {mounted && itemCount > 0 && (
@@ -68,10 +68,10 @@ export function Header() {
               )}
             </Link>
 
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden p-2 text-brown-600"
-              aria-label="Toggle menu"
+<button
+               onClick={() => setMobileOpen(!mobileOpen)}
+               className="md:hidden p-2 text-brown-300"
+               aria-label="Toggle menu"
             >
               {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -85,7 +85,7 @@ export function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-black border-t border-brown-800"
+            className="md:hidden bg-black border-t border-neutral-800"
           >
             <nav className="flex flex-col px-4 py-4">
               {navLinks.map((link) => (
@@ -93,7 +93,7 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="py-3 text-brown-600 hover:text-brown-900 font-medium border-b border-brown-100 last:border-0"
+                  className="py-3 text-brown-300 hover:text-gold font-medium border-b border-neutral-800 last:border-0"
                 >
                   {link.label}
                 </Link>

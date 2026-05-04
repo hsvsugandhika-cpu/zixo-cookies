@@ -47,7 +47,7 @@ export function FeaturedProducts() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-playfair font-bold text-brown-900"
+            className="text-3xl sm:text-4xl lg:text-5xl font-playfair font-bold text-cream"
           >
             Bestsellers
           </motion.h2>
@@ -56,7 +56,7 @@ export function FeaturedProducts() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-brown-500 mt-3 max-w-md mx-auto text-sm sm:text-base"
+            className="text-brown-400 mt-3 max-w-md mx-auto text-sm sm:text-base"
           >
             Our most loved cookies, crafted to perfection
           </motion.p>
@@ -78,19 +78,19 @@ export function FeaturedProducts() {
           {canScrollLeft && (
             <button
               onClick={() => scroll("left")}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 w-9 h-9 sm:w-10 sm:h-10 bg-black/90 backdrop-blur rounded-full shadow-lg flex items-center justify-center hover:bg-brown-800 transition-colors z-10"
-              aria-label="Scroll left"
+className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 w-9 h-9 sm:w-10 sm:h-10 bg-black/90 backdrop-blur rounded-full shadow-lg flex items-center justify-center hover:bg-neutral-800 transition-colors z-10"
+               aria-label="Scroll left"
             >
-              <ChevronLeft className="w-5 h-5 text-brown-700" />
+              <ChevronLeft className="w-5 h-5 text-brown-300" />
             </button>
           )}
           {canScrollRight && (
             <button
               onClick={() => scroll("right")}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 w-9 h-9 sm:w-10 sm:h-10 bg-black/90 backdrop-blur rounded-full shadow-lg flex items-center justify-center hover:bg-brown-800 transition-colors z-10"
-              aria-label="Scroll right"
+className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 w-9 h-9 sm:w-10 sm:h-10 bg-black/90 backdrop-blur rounded-full shadow-lg flex items-center justify-center hover:bg-neutral-800 transition-colors z-10"
+               aria-label="Scroll right"
             >
-              <ChevronRight className="w-5 h-5 text-brown-700" />
+              <ChevronRight className="w-5 h-5 text-brown-300" />
             </button>
           )}
         </div>
@@ -98,7 +98,7 @@ export function FeaturedProducts() {
         <div className="mt-8 text-center sm:hidden">
           <a
             href="/products"
-            className="inline-flex items-center gap-2 text-brown-600 hover:text-gold transition-colors font-medium text-sm"
+            className="inline-flex items-center gap-2 text-brown-300 hover:text-gold transition-colors font-medium text-sm"
           >
             View All Cookies
             <ChevronRight className="w-4 h-4" />

@@ -62,13 +62,13 @@ export default function AdminOrdersPage() {
   return (
     <div className="p-4 sm:p-6 lg:p-8">
       <div className="mb-6">
-        <h1 className="text-xl sm:text-2xl font-playfair font-bold text-brown-900">Orders</h1>
+        <h1 className="text-xl sm:text-2xl font-playfair font-bold text-cream">Orders</h1>
         <p className="text-sm text-brown-500 mt-1">Manage and track all customer orders</p>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-6">
         {[
-          { label: "Total Orders", value: orders.length, icon: Package, color: "text-brown-900" },
+          { label: "Total Orders", value: orders.length, icon: Package, color: "text-cream" },
           { label: "Pending", value: pendingCount, icon: Clock, color: "text-amber-600" },
           { label: "Confirmed", value: confirmedCount, icon: CheckCircle, color: "text-green-600" },
           { label: "Rejected", value: rejectedCount, icon: XCircle, color: "text-red-600" },
@@ -115,7 +115,7 @@ export default function AdminOrdersPage() {
               <div className="p-3 sm:p-6">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3 mb-3 sm:mb-4">
                   <div>
-                    <h3 className="font-mono font-bold text-brown-900 text-sm sm:text-base">{order.id}</h3>
+                    <h3 className="font-mono font-bold text-cream text-sm sm:text-base">{order.id}</h3>
                     <p className="text-xs sm:text-sm text-brown-500">
                       {new Date(order.createdAt).toLocaleString()}
                     </p>
@@ -132,14 +132,14 @@ export default function AdminOrdersPage() {
                     >
                       {order.orderStatus}
                     </span>
-                    <span className="font-bold text-brown-900 text-base sm:text-lg">₹{order.totalAmount}</span>
+                    <span className="font-bold text-cream text-base sm:text-lg">₹{order.totalAmount}</span>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-4 p-3 sm:p-4 bg-brown-50 rounded-lg sm:rounded-xl">
                   <div>
                     <p className="text-xs sm:text-sm text-brown-500 mb-1">Customer</p>
-                    <p className="font-semibold text-brown-900 text-sm">{order.customerDetails.name}</p>
+                    <p className="font-semibold text-cream text-sm">{order.customerDetails.name}</p>
                     <p className="text-xs sm:text-sm text-brown-600">{order.customerDetails.phone}</p>
                   </div>
                   <div>
@@ -157,7 +157,7 @@ export default function AdminOrdersPage() {
                     {order.cartItems.map((item, idx) => (
                       <span
                         key={idx}
-                        className="px-2.5 py-1 sm:px-3 sm:py-1.5 bg-brown-100 text-brown-700 text-xs sm:text-sm rounded-full"
+                        className="px-2.5 py-1 sm:px-3 sm:py-1.5 bg-brown-100 text-brown-300 text-xs sm:text-sm rounded-full"
                       >
                         {item.product.name} × {item.quantity}
                       </span>
@@ -169,7 +169,7 @@ export default function AdminOrdersPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-4">
                     <div className="p-2.5 sm:p-3 bg-brown-50 rounded-lg">
                       <p className="text-xs sm:text-sm text-brown-500 mb-1">Transaction ID</p>
-                      <p className="font-mono text-xs sm:text-sm font-semibold text-brown-900">
+                      <p className="font-mono text-xs sm:text-sm font-semibold text-cream">
                         {order.transactionId}
                       </p>
                     </div>
