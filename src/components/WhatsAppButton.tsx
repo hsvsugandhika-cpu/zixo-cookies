@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { MessageCircle } from "lucide-react"
 import { useEffect, useState } from "react"
 
 export function WhatsAppButton() {
@@ -23,9 +22,9 @@ export function WhatsAppButton() {
       transition={{ delay: 0.5, type: "spring" }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      className="fixed bottom-5 right-5 z-50 w-12 h-12 sm:w-14 sm:h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors"
+      className="fixed bottom-5 right-5 z-50 w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
     >
-      <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+      <img src="/whatsapp-icon.png" alt="WhatsApp" className="w-full h-full object-cover" />
     </motion.a>
   )
 }

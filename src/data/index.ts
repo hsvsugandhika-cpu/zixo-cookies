@@ -201,7 +201,7 @@ export const testimonials: Testimonial[] = [
 ]
 
 export const upiConfig = {
-  upiId: "yourbrand@upi",
+  upiId: "sksaleemasksaleema40@oksbi",
   brandName: "Zixo Cookies",
 }
 

@@ -25,7 +25,7 @@ export default function CheckoutPage() {
     state: "",
   })
 
-  const [paymentMethod, setPaymentMethod] = useState<"upi" | "cod">("upi")
+  const [paymentMethod] = useState<"upi">("upi")
   const [couponCode, setCouponCode] = useState("")
   const [couponApplied, setCouponApplied] = useState(false)
   const [discount, setDiscount] = useState(0)
@@ -224,36 +224,8 @@ export default function CheckoutPage() {
             </div>
 
             <div className="bg-dark-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-dark-border shadow-sm">
-              <h2 className="font-playfair text-lg sm:text-xl font-bold text-cream mb-4">Payment Method</h2>
-              <div className="flex gap-2 sm:gap-4 mb-4 sm:mb-6">
-                <button
-                  onClick={() => setPaymentMethod("upi")}
-                  className={`flex-1 py-2.5 sm:py-3 px-3 sm:px-4 rounded-lg sm:rounded-xl border-2 text-sm sm:text-base font-medium transition-all ${
-                    paymentMethod === "upi"
-                      ? "border-gold bg-gold/10 text-cream"
-                      : "border-dark-border text-brown-400 hover:border-brown-300"
-                  }`}
-                >
-                  UPI Payment
-                </button>
-                <button
-                  onClick={() => setPaymentMethod("cod")}
-                  className={`flex-1 py-2.5 sm:py-3 px-3 sm:px-4 rounded-lg sm:rounded-xl border-2 text-sm sm:text-base font-medium transition-all ${
-                    paymentMethod === "cod"
-                      ? "border-gold bg-gold/10 text-cream"
-                      : "border-dark-border text-brown-400 hover:border-brown-300"
-                  }`}
-                >
-                  COD
-                </button>
-              </div>
-
-              {paymentMethod === "upi" && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="space-y-3 sm:space-y-4 p-3 sm:p-4 bg-dark rounded-lg sm:rounded-xl border border-dark-border"
-                >
+              <h2 className="font-playfair text-lg sm:text-xl font-bold text-cream mb-4">UPI Payment</h2>
+              <div className="space-y-3 sm:space-y-4">
                   <div className="flex items-center justify-between p-2.5 sm:p-3 bg-dark-card rounded-lg border border-dark-border">
                     <div>
                       <p className="text-xs sm:text-sm text-brown-500">UPI ID</p>
@@ -306,20 +278,7 @@ export default function CheckoutPage() {
                       />
                     </div>
                   </div>
-                </motion.div>
-              )}
-
-              {paymentMethod === "cod" && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="p-3 sm:p-4 bg-dark rounded-lg sm:rounded-xl border border-dark-border"
-                >
-                  <p className="text-xs sm:text-sm text-brown-300">
-                    Pay cash when your order is delivered. Please keep exact change ready.
-                  </p>
-                </motion.div>
-              )}
+              </div>
             </div>
 
             {error && (
@@ -334,7 +293,7 @@ export default function CheckoutPage() {
           </div>
 
           <div className="lg:col-span-1">
-            <div className="bg-brown-900 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm lg:sticky lg:top-24">
+            <div className="bg-dark-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-dark-border shadow-sm lg:sticky lg:top-24">
               <h3 className="font-playfair text-lg sm:text-xl font-bold text-cream mb-3 sm:mb-4">Order Summary</h3>
 
               <div className="space-y-2 sm:space-y-3 mb-3 sm:mb-4 max-h-40 sm:max-h-48 overflow-y-auto">

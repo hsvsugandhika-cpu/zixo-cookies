@@ -28,7 +28,8 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl sm:text-3xl font-playfair font-bold text-cream tracking-tight">
+            <img src="/zixo-logo.png" alt="Zixo Cookies" className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover" />
+            <span className="text-xl sm:text-2xl font-playfair font-bold text-cream tracking-tight">
               Zixo <span className="text-gold">Cookies</span>
             </span>
           </Link>
