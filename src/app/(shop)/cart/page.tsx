@@ -13,7 +13,7 @@ export default function CartPage() {
 
   if (items.length === 0) {
     return (
-      <section className="py-16 sm:py-24 bg-black min-h-[60vh] flex items-center">
+      <section className="py-16 sm:py-24 bg-dark min-h-[60vh] flex items-center">
         <div className="max-w-md mx-auto px-4 text-center">
           <ShoppingBag className="w-14 h-14 sm:w-16 sm:h-16 mx-auto text-brown-200 mb-6" />
           <h2 className="text-2xl sm:text-3xl font-playfair font-bold text-cream mb-3">
@@ -24,7 +24,7 @@ export default function CartPage() {
           </p>
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-brown-900 text-cream font-semibold rounded-full hover:bg-gold hover:text-brown-900 transition-colors text-sm sm:text-base"
+            className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gold text-brown-900 font-semibold rounded-full hover:bg-gold-light transition-colors text-sm sm:text-base"
           >
             Browse Cookies
             <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -35,7 +35,7 @@ export default function CartPage() {
   }
 
   return (
-    <section className="py-6 sm:py-12 bg-black min-h-screen">
+    <section className="py-6 sm:py-12 bg-dark min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-playfair font-bold text-cream mb-6 sm:mb-10">
           Your Cart
@@ -47,7 +47,7 @@ export default function CartPage() {
               <motion.div
                 layout
                 key={item.product.id}
-                className="flex gap-3 sm:gap-4 p-3 sm:p-4 bg-brown-900 rounded-xl sm:rounded-2xl shadow-sm"
+                className="flex gap-3 sm:gap-4 p-3 sm:p-4 bg-dark-card rounded-xl sm:rounded-2xl border border-dark-border shadow-sm"
               >
                 <Link href={`/product/${item.product.id}`} className="w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 rounded-lg sm:rounded-xl overflow-hidden">
                   <img
@@ -79,7 +79,7 @@ export default function CartPage() {
                   <div className="flex items-center gap-1.5 sm:gap-2">
                     <button
                       onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
-                      className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-brown-200 flex items-center justify-center hover:bg-brown-50"
+                      className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-dark-border flex items-center justify-center hover:bg-dark-border"
                       aria-label="Decrease quantity"
                     >
                       <Minus className="w-3 h-3" />
@@ -87,7 +87,7 @@ export default function CartPage() {
                     <span className="w-7 sm:w-8 text-center font-semibold text-xs sm:text-sm">{item.quantity}</span>
                     <button
                       onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
-                      className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-brown-200 flex items-center justify-center hover:bg-brown-50"
+                      className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-dark-border flex items-center justify-center hover:bg-dark-border"
                       aria-label="Increase quantity"
                     >
                       <Plus className="w-3 h-3" />
@@ -99,19 +99,19 @@ export default function CartPage() {
           </div>
 
           <div className="lg:col-span-1">
-            <div className="bg-brown-900 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm lg:sticky lg:top-24">
+            <div className="bg-dark-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-dark-border shadow-sm lg:sticky lg:top-24">
               <h3 className="font-playfair text-lg sm:text-xl font-bold text-cream mb-4">Order Summary</h3>
 
               <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
-                <div className="flex justify-between text-sm sm:text-base text-brown-600">
+                <div className="flex justify-between text-sm sm:text-base text-brown-400">
                   <span>Subtotal</span>
                   <span>₹{getTotal()}</span>
                 </div>
-                <div className="flex justify-between text-sm sm:text-base text-brown-600">
+                <div className="flex justify-between text-sm sm:text-base text-brown-400">
                   <span>Delivery</span>
                   <span className="text-green-600 font-medium">Free</span>
                 </div>
-                <div className="border-t border-brown-100 pt-2 sm:pt-3 flex justify-between">
+                <div className="border-t border-dark-border pt-2 sm:pt-3 flex justify-between">
                   <span className="font-bold text-cream text-base sm:text-lg">Total</span>
                   <span className="font-bold text-cream text-base sm:text-lg">₹{getTotal()}</span>
                 </div>
@@ -119,7 +119,7 @@ export default function CartPage() {
 
               <Link
                 href="/checkout"
-                className="w-full py-3 sm:py-4 bg-brown-900 text-cream font-semibold rounded-full hover:bg-gold hover:text-brown-900 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+                className="w-full py-3 sm:py-4 bg-gold text-brown-900 font-semibold rounded-full hover:bg-gold-light transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
               >
                 Proceed to Checkout
                 <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />

@@ -24,7 +24,7 @@ export function Header() {
   }, [])
 
   return (
-    <header className="sticky top-0 z-50 bg-black/90 backdrop-blur-xl border-b border-neutral-800">
+    <header className="sticky top-0 z-50 bg-dark/90 backdrop-blur-xl border-b border-dark-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <Link href="/" className="flex items-center gap-2">
@@ -85,7 +85,7 @@ export function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-black border-t border-neutral-800"
+            className="md:hidden bg-dark border-t border-dark-border"
           >
             <nav className="flex flex-col px-4 py-4">
               {navLinks.map((link) => (

@@ -40,7 +40,7 @@ export function FeaturedProducts() {
   }
 
   return (
-    <section className="py-12 sm:py-20 bg-black">
+    <section className="py-12 sm:py-20 bg-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12">
           <motion.h2
@@ -78,7 +78,7 @@ export function FeaturedProducts() {
           {canScrollLeft && (
             <button
               onClick={() => scroll("left")}
-className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 w-9 h-9 sm:w-10 sm:h-10 bg-black/90 backdrop-blur rounded-full shadow-lg flex items-center justify-center hover:bg-neutral-800 transition-colors z-10"
+className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 w-9 h-9 sm:w-10 sm:h-10 bg-dark-card/90 backdrop-blur rounded-full shadow-lg flex items-center justify-center hover:bg-dark-border transition-colors z-10"
                aria-label="Scroll left"
             >
               <ChevronLeft className="w-5 h-5 text-brown-300" />
@@ -87,7 +87,7 @@ className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate
           {canScrollRight && (
             <button
               onClick={() => scroll("right")}
-className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 w-9 h-9 sm:w-10 sm:h-10 bg-black/90 backdrop-blur rounded-full shadow-lg flex items-center justify-center hover:bg-neutral-800 transition-colors z-10"
+className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 w-9 h-9 sm:w-10 sm:h-10 bg-dark-card/90 backdrop-blur rounded-full shadow-lg flex items-center justify-center hover:bg-dark-border transition-colors z-10"
                aria-label="Scroll right"
             >
               <ChevronRight className="w-5 h-5 text-brown-300" />

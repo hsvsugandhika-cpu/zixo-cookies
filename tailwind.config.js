@@ -8,7 +8,7 @@ module.exports = {
       colors: {
         cream: {
           DEFAULT: "#FDF8F3",
-          dark: "#F5EDE4",
+          dark: "#E8DDD4",
         },
         beige: "#E8D5C4",
         brown: {
@@ -26,6 +26,12 @@ module.exports = {
         gold: {
           DEFAULT: "#D4A853",
           light: "#E8C97A",
+        },
+        dark: {
+          DEFAULT: "#0A0A0A",
+          card: "#141414",
+          border: "#2A2A2A",
+          muted: "#8A8A8A",
         },
       },
       fontFamily: {

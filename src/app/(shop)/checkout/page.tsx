@@ -128,12 +128,12 @@ export default function CheckoutPage() {
 
   if (items.length === 0) {
     return (
-      <section className="py-16 sm:py-24 bg-black min-h-[60vh] flex items-center">
+      <section className="py-16 sm:py-24 bg-dark min-h-[60vh] flex items-center">
         <div className="max-w-md mx-auto px-4 text-center">
           <p className="text-brown-500 mb-6 text-sm sm:text-base">Your cart is empty. Add some delicious cookies first!</p>
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-brown-900 text-cream font-semibold rounded-full hover:bg-gold hover:text-brown-900 transition-colors text-sm sm:text-base"
+            className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-gold text-brown-900 font-semibold rounded-full hover:bg-gold-light transition-colors text-sm sm:text-base"
           >
             <ChevronLeft className="w-4 h-4" />
             Browse Cookies
@@ -144,7 +144,7 @@ export default function CheckoutPage() {
   }
 
   return (
-    <section className="py-6 sm:py-12 bg-black min-h-screen">
+    <section className="py-6 sm:py-12 bg-dark min-h-screen">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link href="/cart" className="inline-flex items-center gap-1.5 text-sm text-brown-300 hover:text-cream mb-4 sm:mb-6">
           <ChevronLeft className="w-4 h-4" />
@@ -157,7 +157,7 @@ export default function CheckoutPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           <div className="lg:col-span-2 space-y-4 sm:space-y-6">
-            <div className="bg-brown-900 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm">
+            <div className="bg-dark-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-dark-border shadow-sm">
               <h2 className="font-playfair text-lg sm:text-xl font-bold text-cream mb-4">Delivery Details</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div className="sm:col-span-2">
@@ -166,7 +166,7 @@ export default function CheckoutPage() {
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-brown-200 rounded-lg sm:rounded-xl text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
+                    className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-dark-border bg-dark rounded-lg sm:rounded-xl text-sm sm:text-base text-cream placeholder-brown-500 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
                     placeholder="John Doe"
                   />
                 </div>
@@ -176,7 +176,7 @@ export default function CheckoutPage() {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-brown-200 rounded-lg sm:rounded-xl text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
+                    className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-dark-border bg-dark rounded-lg sm:rounded-xl text-sm sm:text-base text-cream placeholder-brown-500 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
                     placeholder="+91 98765 43210"
                   />
                 </div>
@@ -186,7 +186,7 @@ export default function CheckoutPage() {
                     type="text"
                     value={formData.city}
                     onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                    className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-brown-200 rounded-lg sm:rounded-xl text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
+                    className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-dark-border bg-dark rounded-lg sm:rounded-xl text-sm sm:text-base text-cream placeholder-brown-500 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
                     placeholder="Mumbai"
                   />
                 </div>
@@ -196,7 +196,7 @@ export default function CheckoutPage() {
                     type="text"
                     value={formData.pincode}
                     onChange={(e) => setFormData({ ...formData, pincode: e.target.value })}
-                    className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-brown-200 rounded-lg sm:rounded-xl text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
+                    className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-dark-border bg-dark rounded-lg sm:rounded-xl text-sm sm:text-base text-cream placeholder-brown-500 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
                     placeholder="400001"
                   />
                 </div>
@@ -206,7 +206,7 @@ export default function CheckoutPage() {
                     type="text"
                     value={formData.state}
                     onChange={(e) => setFormData({ ...formData, state: e.target.value })}
-                    className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-brown-200 rounded-lg sm:rounded-xl text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
+                    className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-dark-border bg-dark rounded-lg sm:rounded-xl text-sm sm:text-base text-cream placeholder-brown-500 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
                     placeholder="Maharashtra"
                   />
                 </div>
@@ -223,7 +223,7 @@ export default function CheckoutPage() {
               </div>
             </div>
 
-            <div className="bg-brown-900 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm">
+            <div className="bg-dark-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-dark-border shadow-sm">
               <h2 className="font-playfair text-lg sm:text-xl font-bold text-cream mb-4">Payment Method</h2>
               <div className="flex gap-2 sm:gap-4 mb-4 sm:mb-6">
                 <button
@@ -231,7 +231,7 @@ export default function CheckoutPage() {
                   className={`flex-1 py-2.5 sm:py-3 px-3 sm:px-4 rounded-lg sm:rounded-xl border-2 text-sm sm:text-base font-medium transition-all ${
                     paymentMethod === "upi"
                       ? "border-gold bg-gold/10 text-cream"
-                      : "border-brown-200 text-brown-500 hover:border-brown-300"
+                      : "border-dark-border text-brown-400 hover:border-brown-300"
                   }`}
                 >
                   UPI Payment
@@ -241,7 +241,7 @@ export default function CheckoutPage() {
                   className={`flex-1 py-2.5 sm:py-3 px-3 sm:px-4 rounded-lg sm:rounded-xl border-2 text-sm sm:text-base font-medium transition-all ${
                     paymentMethod === "cod"
                       ? "border-gold bg-gold/10 text-cream"
-                      : "border-brown-200 text-brown-500 hover:border-brown-300"
+                      : "border-dark-border text-brown-400 hover:border-brown-300"
                   }`}
                 >
                   COD
@@ -252,16 +252,16 @@ export default function CheckoutPage() {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="space-y-3 sm:space-y-4 p-3 sm:p-4 bg-brown-50 rounded-lg sm:rounded-xl"
+                  className="space-y-3 sm:space-y-4 p-3 sm:p-4 bg-dark rounded-lg sm:rounded-xl border border-dark-border"
                 >
-                  <div className="flex items-center justify-between p-2.5 sm:p-3 bg-brown-900 rounded-lg">
+                  <div className="flex items-center justify-between p-2.5 sm:p-3 bg-dark-card rounded-lg border border-dark-border">
                     <div>
                       <p className="text-xs sm:text-sm text-brown-500">UPI ID</p>
                       <p className="font-mono text-sm sm:text-base font-semibold text-cream">{upiConfig.upiId}</p>
                     </div>
                     <button
                       onClick={copyUpiId}
-                      className="p-2 hover:bg-brown-100 rounded-lg transition-colors"
+                      className="p-2 hover:bg-dark-border rounded-lg transition-colors"
                       aria-label="Copy UPI ID"
                     >
                       {copied ? (
@@ -290,7 +290,7 @@ export default function CheckoutPage() {
                         type="text"
                         value={transactionId}
                         onChange={(e) => setTransactionId(e.target.value)}
-                        className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-brown-200 rounded-lg sm:rounded-xl text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
+                        className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-dark-border bg-dark rounded-lg sm:rounded-xl text-sm sm:text-base text-cream placeholder-brown-500 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
                         placeholder="Enter UPI transaction reference"
                       />
                     </div>
@@ -313,7 +313,7 @@ export default function CheckoutPage() {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="p-3 sm:p-4 bg-brown-50 rounded-lg sm:rounded-xl"
+                  className="p-3 sm:p-4 bg-dark rounded-lg sm:rounded-xl border border-dark-border"
                 >
                   <p className="text-xs sm:text-sm text-brown-300">
                     Pay cash when your order is delivered. Please keep exact change ready.
@@ -326,7 +326,7 @@ export default function CheckoutPage() {
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="text-red-500 text-sm bg-red-50 p-3 rounded-lg sm:rounded-xl"
+                className="text-red-400 text-sm bg-red-900/20 border border-red-900/30 p-3 rounded-lg sm:rounded-xl"
               >
                 {error}
               </motion.p>
@@ -354,14 +354,14 @@ export default function CheckoutPage() {
                     type="text"
                     value={couponCode}
                     onChange={(e) => setCouponCode(e.target.value)}
-                    className="flex-1 px-3 sm:px-4 py-2 sm:py-2.5 border border-brown-200 rounded-lg sm:rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
+                    className="flex-1 px-3 sm:px-4 py-2 sm:py-2.5 border border-dark-border bg-dark rounded-lg sm:rounded-xl text-xs sm:text-sm text-cream placeholder-brown-500 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
                     placeholder="Coupon code"
                     disabled={couponApplied}
                   />
                   <button
                     onClick={handleCoupon}
                     disabled={couponApplied || !couponCode}
-                    className="px-3 sm:px-4 py-2 sm:py-2.5 bg-brown-900 text-cream text-xs sm:text-sm font-medium rounded-lg sm:rounded-xl hover:bg-gold hover:text-brown-900 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-3 sm:px-4 py-2 sm:py-2.5 bg-gold text-brown-900 text-xs sm:text-sm font-medium rounded-lg sm:rounded-xl hover:bg-gold-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {couponApplied ? "Applied" : "Apply"}
                   </button>
@@ -371,7 +371,7 @@ export default function CheckoutPage() {
                 )}
               </div>
 
-              <div className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-6 pt-2 sm:pt-3 sm:border-t sm:border-brown-100">
+              <div className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-6 pt-2 sm:pt-3 sm:border-t sm:border-dark-border">
                 <div className="flex justify-between text-xs sm:text-sm text-brown-300">
                   <span>Subtotal</span>
                   <span>₹{subtotal}</span>
@@ -386,7 +386,7 @@ export default function CheckoutPage() {
                   <span>Delivery</span>
                   <span className="text-green-600 font-medium">Free</span>
                 </div>
-                <div className="flex justify-between pt-2 border-t border-brown-100">
+                <div className="flex justify-between pt-2 border-t border-dark-border">
                   <span className="font-bold text-cream text-base sm:text-lg">Total</span>
                   <span className="font-bold text-cream text-base sm:text-lg">₹{total}</span>
                 </div>
@@ -396,7 +396,7 @@ export default function CheckoutPage() {
                 whileTap={{ scale: 0.98 }}
                 onClick={handleSubmit}
                 disabled={loading}
-                className="w-full py-3 sm:py-4 bg-brown-900 text-cream font-semibold rounded-full hover:bg-gold hover:text-brown-900 transition-colors disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-sm sm:text-base"
+                className="w-full py-3 sm:py-4 bg-gold text-brown-900 font-semibold rounded-full hover:bg-gold-light transition-colors disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-sm sm:text-base"
               >
                 {loading ? (
                   <>

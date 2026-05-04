@@ -6,14 +6,14 @@ import { ArrowRight } from "lucide-react"
 
 export function Hero() {
   return (
-    <section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden bg-black">
+    <section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden bg-dark">
       <div className="absolute inset-0">
         <img
           src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=1600&q=80"
           alt="Premium cookies background"
           className="w-full h-full object-cover opacity-40"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/85 to-black/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/90 to-dark" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">

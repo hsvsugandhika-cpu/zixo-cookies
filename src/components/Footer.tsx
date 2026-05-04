@@ -4,7 +4,7 @@ import { contactPhone, brandAddress, supportHours, socialLinks } from "@/data"
 
 export function Footer() {
   return (
-    <footer className="bg-black text-cream">
+    <footer className="bg-dark border-t border-dark-border text-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
           <div className="sm:col-span-2">
@@ -20,7 +20,7 @@ export function Footer() {
                 href={socialLinks.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-className="p-2 sm:p-2.5 bg-neutral-800 rounded-full hover:bg-neutral-700 transition-colors"
+className="p-2 sm:p-2.5 bg-dark-card border border-dark-border rounded-full hover:bg-dark-border transition-colors"
                  aria-label="Instagram"
               >
                 <Camera className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -29,7 +29,7 @@ className="p-2 sm:p-2.5 bg-neutral-800 rounded-full hover:bg-neutral-700 transit
                 href={socialLinks.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-className="p-2 sm:p-2.5 bg-neutral-800 rounded-full hover:bg-neutral-700 transition-colors"
+className="p-2 sm:p-2.5 bg-dark-card border border-dark-border rounded-full hover:bg-dark-border transition-colors"
                  aria-label="YouTube"
               >
                 <Play className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -38,7 +38,7 @@ className="p-2 sm:p-2.5 bg-neutral-800 rounded-full hover:bg-neutral-700 transit
                 href="https://wa.me/918096697748"
                 target="_blank"
                 rel="noopener noreferrer"
-className="p-2 sm:p-2.5 bg-neutral-800 rounded-full hover:bg-neutral-700 transition-colors"
+className="p-2 sm:p-2.5 bg-dark-card border border-dark-border rounded-full hover:bg-dark-border transition-colors"
                  aria-label="WhatsApp"
               >
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -86,7 +86,7 @@ className="p-2 sm:p-2.5 bg-neutral-800 rounded-full hover:bg-neutral-700 transit
           </div>
         </div>
 
-        <div className="border-t border-neutral-800 mt-8 sm:mt-10 pt-6 sm:pt-8 text-center text-brown-500 text-xs sm:text-sm">
+        <div className="border-t border-dark-border mt-8 sm:mt-10 pt-6 sm:pt-8 text-center text-dark-muted text-xs sm:text-sm">
           <p>© 2026 Zixo Cookies. All rights reserved. Made with love.</p>
         </div>
       </div>

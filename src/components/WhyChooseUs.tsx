@@ -28,7 +28,7 @@ const features = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-16 sm:py-24 bg-black text-cream">
+    <section className="py-16 sm:py-24 bg-dark text-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <motion.span
@@ -59,7 +59,7 @@ export function WhyChooseUs() {
               transition={{ delay: index * 0.15 }}
               className="text-center group"
             >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-brown-800 flex items-center justify-center group-hover:bg-gold/20 transition-colors duration-300">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-dark-card border border-dark-border flex items-center justify-center group-hover:bg-gold/20 transition-colors duration-300">
                 <feature.icon className="w-7 h-7 text-gold" />
               </div>
               <h3 className="font-playfair text-xl font-semibold mb-3">{feature.title}</h3>

@@ -39,7 +39,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
       className="group"
     >
       <Link href={`/product/${product.id}`} className="block">
-        <div className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-neutral-900 h-[120px] sm:h-[160px] mb-2 sm:mb-3">
+        <div className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-dark-card h-[120px] sm:h-[160px] mb-2 sm:mb-3 border border-dark-border">
           <img
             src={product.image}
             alt={product.name}
@@ -51,7 +51,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
             </span>
           )}
           {product.originalPrice && (
-            <span className="absolute top-2 right-2 sm:top-3 sm:right-3 px-1.5 py-0.5 sm:px-2 sm:py-1 bg-brown-900/80 text-cream text-[10px] sm:text-xs font-medium rounded-full">
+            <span className="absolute top-2 right-2 sm:top-3 sm:right-3 px-1.5 py-0.5 sm:px-2 sm:py-1 bg-dark/80 text-cream text-[10px] sm:text-xs font-medium rounded-full">
               -{Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)}%
             </span>
           )}
@@ -78,7 +78,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
             className={`flex items-center gap-1 sm:gap-2 px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-[11px] sm:text-sm font-medium transition-all duration-300 ${
               mounted && added
                 ? "bg-green-500 text-white"
-                : "bg-brown-900 text-cream hover:bg-gold"
+                : "bg-gold text-brown-900 hover:bg-gold-light"
             }`}
           >
             <ShoppingBag className="w-3 h-3 sm:w-4 sm:h-4" />

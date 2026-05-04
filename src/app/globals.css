@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #000000;
+  background-color: #0A0A0A;
   color: #FDF8F3;
 }
 
@@ -16,16 +16,16 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: #0A0A0A;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #CBA98A;
+  background: #D4A853;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #D4A853;
+  background: #E8C97A;
 }
 
 @keyframes shimmer {
@@ -38,7 +38,7 @@ html {
 }
 
 .loading-shimmer {
-  background: linear-gradient(90deg, #1a1a1a 25%, #333333 50%, #1a1a1a 75%);
+  background: linear-gradient(90deg, #141414 25%, #1f1f1f 50%, #141414 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }

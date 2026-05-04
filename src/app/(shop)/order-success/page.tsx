@@ -24,13 +24,13 @@ export default function OrderSuccessPage() {
   )
 
   return (
-    <section className="py-12 sm:py-24 bg-black min-h-[70vh] flex items-center">
+    <section className="py-12 sm:py-24 bg-dark min-h-[70vh] flex items-center">
       <div className="max-w-lg mx-auto px-4 text-center">
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: "spring", stiffness: 200, damping: 15 }}
-          className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 bg-green-100 rounded-full flex items-center justify-center"
+          className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 bg-green-900/30 rounded-full flex items-center justify-center"
         >
           <CheckCircle className="w-8 h-8 sm:w-10 sm:h-10 text-green-500" />
         </motion.div>
@@ -57,7 +57,7 @@ export default function OrderSuccessPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="bg-brown-900 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm mb-6 sm:mb-8"
+          className="bg-dark-card rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-dark-border shadow-sm mb-6 sm:mb-8"
         >
           <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
             <Package className="w-4 h-4 sm:w-5 sm:h-5 text-gold" />
@@ -90,7 +90,7 @@ export default function OrderSuccessPage() {
 
           <Link
             href="/products"
-            className="w-full py-3 sm:py-4 bg-brown-900 text-cream font-semibold rounded-full hover:bg-gold hover:text-cream transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+            className="w-full py-3 sm:py-4 bg-gold text-brown-900 font-semibold rounded-full hover:bg-gold-light transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
           >
             Continue Shopping
             <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
