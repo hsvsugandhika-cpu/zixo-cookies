@@ -9,7 +9,8 @@ import { CustomerDetails } from "@/types"
 import { uploadScreenshot, saveOrder } from "@/lib/firebase-utils"
 import { Loader2, Copy, Check, ChevronLeft } from "lucide-react"
 import Link from "next/link"
-
+import {useEffect} from "react";
+import {initAnalytics} from "@/lib/firebase";
 export default function CheckoutPage() {
   const router = useRouter()
   const items = useCartStore((state) => state.items)
@@ -37,6 +38,10 @@ export default function CheckoutPage() {
 
   const subtotal = getTotal()
   const total = subtotal - discount
+  useEffect(() =>{
+    inintAnalystics();
+  },
+            []);
 
   const generateOrderId = () => `CL${Date.now().toString(36).toUpperCase()}`
 
