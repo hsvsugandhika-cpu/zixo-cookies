@@ -19,7 +19,7 @@ export default function AdminLoginPage() {
     setError("")
 
     try {
-      await loginAdmin(email, password)
+      await SignINWithemailAndPassword(auth,email, password)
       router.push("/admin/orders")
     } catch (err) {
       setError("Invalid credentials. Please try again.")
